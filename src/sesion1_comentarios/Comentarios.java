@@ -90,7 +90,7 @@ public class Comentarios {
     -Reducir el codigo a menos lineas (Tema: concatenacion)
     
             tarea 19 Junio
-    - Investigar Operadores Logicos y su funcionamiento
-    - Refinar el tema de concatenacion y aplicarlo a nuestro programa
+    - Investigar Operadores Logicos y su funcionamiento 1 ejemplo por cada uno en un if
+    - Refinar el tema de concatenacion pag 26 libro Java a Fondo, y aplicarlo a nuestro programa
     */
 }
