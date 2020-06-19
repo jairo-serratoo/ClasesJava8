@@ -15,46 +15,56 @@ public class Comentarios {
     public static void main(String[] args){
         //Atributos
         String nameJairo = "Jairo";
-        String nameLuis = "Luis";
-        String nameOmar = "Omar";
-        String nameCarlos = "Carlos";
-        String nameFernando= "Fernando";
-        //int edad = 28;
         double pesoJairo = 115.9;
+        double pesoDeseadoJairo = clacularPeso(pesoJairo, 20, "restar");
+          
+        String nameLuis = "Luis";
         double pesoLuis = 150;
-        double pesoOmar = 98;
-        double pesoCarlos = 60;
-        double pesoFernando = 49;
+        double pesoDeseadoLuis = clacularPeso(pesoLuis, 30, "restar");
         
-        double pesoDeseadoJairo = restePeso(pesoJairo, 20);
-        double pesoDeseadoLuis = restePeso(pesoLuis, 30);
-        double pesoDeseadoOmar = restePeso(pesoOmar, 10);
-        double pesoDeseadoCarlos = restePeso(pesoCarlos, 5);
-        double pesoDeseadoFernando = restePeso(pesoFernando, 5.5); //Ganar
-        System.out.println(nameJairo);
-        System.out.println(nameLuis);
-        System.out.println(nameOmar);
-        System.out.println(nameCarlos);
-        System.out.println(nameFernando);
-        //System.out.println(edad);
-        System.out.println(pesoDeseadoJairo);
-        System.out.println(pesoDeseadoLuis);
-        System.out.println(pesoDeseadoOmar);
-        System.out.println(pesoDeseadoCarlos);
-        System.out.println(pesoDeseadoFernando);
+        String nameOmar = "Omar";
+        double pesoOmar = 98;
+         double pesoDeseadoOmar = clacularPeso(pesoOmar, 10, "restar");
+        
+        String nameCarlos = "Carlos";
+        double pesoCarlos = 60;
+        double pesoDeseadoCarlos = clacularPeso(pesoCarlos, 5, "restar");
+        
+        String nameFernando= "Fernando";
+        double pesoFernando = 49;
+        double pesoDeseadoFernando = clacularPeso(pesoFernando, 5.5, "sumar"); //Ganar
+        
+        System.out.println("Nombre: " + nameJairo + ", Peso: " + pesoDeseadoJairo);
+        System.out.println("Nombre: " + nameLuis + ", Peso: " + pesoDeseadoLuis);
+        System.out.println("Nombre: " + nameOmar + ", Peso: " + pesoDeseadoOmar);
+        System.out.println("Nombre: " + nameCarlos + ", Peso: " + pesoDeseadoCarlos);
+        System.out.println("Nombre: " + nameFernando + ", Peso: " + pesoDeseadoFernando);
     }
     
     /**
      * Este metodo se creo a raiz de que Jairo es vanidoso y se queria quitar 20 kilos de encima
      * @param peso el peso real del vanidoso de Jairo
      * @param pesoAPerder es el peso que se le restara
+     * @param signo determinara si se suma o se resta peso
      * @return el peso real menos el peso a perder
      */
-    public static Double restePeso(double peso, double pesoAPerder){
+    public static Double clacularPeso(double peso, double pesoAPerder, String signo){
         double nuevoPeso = 0.0;
-        nuevoPeso = peso - pesoAPerder;
+        if(signo.equals("sumar")){
+            nuevoPeso = peso + pesoAPerder;
+        }else{
+            nuevoPeso = peso - pesoAPerder;
+        }
         return nuevoPeso;
     }
+    
+    /*
+        if(signo == +){
+            sumar peso;
+        }else{
+            perder peso;
+        }
+    */
     
     
     //Comentario de linea
@@ -78,5 +88,9 @@ public class Comentarios {
         tarea 18 Junio
     -Lograr que el metodo que vamos trabajando, pueda sumarle el peso deseado de Fernando
     -Reducir el codigo a menos lineas (Tema: concatenacion)
+    
+            tarea 19 Junio
+    - Investigar Operadores Logicos y su funcionamiento
+    - Refinar el tema de concatenacion y aplicarlo a nuestro programa
     */
 }
